@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel=" stylesheet" href="stylesheet.css">
+        <title>Store</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+
+<!--    <header>-->
+    <script src="/assets/JavaScript/header.js"></script>
+<!--    </header>-->
+
+    <!-- Body  -->
+
+    <!--billing form-->
+    <div class="billing-container disable">
+        <div class="billing-form disable">
+            <i class='bx bx-x' id="close-billing"></i>
+            <div class="checkout-form">
+                <form class="form" id="form" action="/" method="get">
+                    <div class="billing-details">
+                        <div class="form-control">
+                            <label>Full name</label>
+                            <input id="name" type="name" placeholder="Name">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control" id="none">
+                            <label>Email</label>
+                            <input  id="email" type="email" placeholder="Email Address">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Confirm Email</label>
+                            <input  id="confirm-email" type="email" placeholder="Confirm Email Address">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Phone Number</label>
+                            <input  id="phone" type="number" placeholder="Phone No.">
+                            <i class='bx bxs-check-circle'></i>
+                            <i class='bx bxs-error-circle' ></i>
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Buy product for:</label>
+                            <select name="product" id="product">
+                                <option value="" disabled selected>Please select option</option>
+                                <option value="yourself">Yourself</option>
+                                <option value="someone">Someone else</option>
+                            </select>
+                            <i class='bx bxs-check-circle big'></i>
+                            <i class='bx bxs-error-circle big' ></i>
+                            <small>Error Message</small>
+
+                        </div>
+                        <div class="terms-button">
+                            <label for="agree">Agree on terms and conditions</label>
+                            <input type="checkbox" id="agree" name="agree">
+                            <small>Please accept terms and servicese</small>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+
+                        </div>
+                    </div>
+                </form>
+
+                <form action="" class="billing" id="billing">
+                    <div class="card">
+                        <h1 class="card-title">
+                            Enter Payment Information
+                        </h1>
+                        <div class="card-row">
+                            <div class="card-col card-num">
+                                <label for="cardNumber" class="card-label">Card Number</label>
+                                <input type="text" class="card-input card-input-large" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+                                <small>Error</small>
+                            </div>
+                            <div class="card-col card-num">
+                                <label for="cardName" class="card-label">Name On Card</label>
+                                <input type="text" class="card-input card-input-large" id="cardName" placeholder="Please enter your name">
+                                <small>Error</small>
+                            </div>
+                            <div class="card-row card-num">
+                                <label for="cardExpiry" class="card-label">Expiry Date</label>
+                                <input type="text" class="card-input" id="cardExpiry" placeholder="xx/xx">
+                                <small>Error</small>
+                            </div>
+                            <div class="card-row card-num">
+                                <label for="cardCCV" class="card-label">CCV</label>
+                                <input type="text" class="card-input" id="cardCCV" placeholder="xxx">
+                                <small>Error</small>
+                            </div>
+                        </div>
+                        <button type="checkout" id="checkout">Checkout</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--billing form end-->
+
+
+
+    <section class="shop featured-section">
+            <h2 class="featured-title">Featured Game</h2>
+            <div class="featured-shop-items">
+                <div class="featured-game"><img src="assets/Bundle.jpg" class="shop-item-image"></div>
+                <div class="featured-details">
+                    <span class="featured shop-item-title">Game Bundle</span>
+                    <span class="featured shop-item-price">$50.00</span>
+                    <button type="button" class="featured shop-item-button">Add to cart</button>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="shop content-section">
+            <h2 class="section-title">Browse Games</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/keywe-key-art.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Key We</span>
+                        <span class="shop-item-price">$20.00</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/snacko.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Snacko</span>
+                        <span class="shop-item-price">$49.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/unpacking.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Unpacking</span>
+                        <span class="shop-item-price">$30.00</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="/assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <img src="/assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <!--Section 2-->
+            <h2 class="section-title">Bundles</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="/assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Section 3-->
+            <h2 class="section-title">DLC / Game Items</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="/assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <!--Section 4-->
+            <h2 class="section-title">Merchandise</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="/assets/brick-world-thumbnail.jpg" class="shop-item-image">
+                    <div class="shop-item-details">
+                        <span class="shop-item-title">Brick World</span>
+                        <span class="shop-item-price">$16.99</span>
+                        <button type="button" class="shop-item-button">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!--    calling javaScripts-->
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="/assets/JavaScript/footer.js"></script>
+    <script src="/assets/JavaScript/store.js"></script>
+    </body>
+</html>

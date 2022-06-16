@@ -1,0 +1,1596 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Francois+One&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    background: #FFFFFF;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+}
+
+/*header search bar*/
+header .search-container {
+    float: right;
+    /*position: static;*/
+
+}
+
+header input[type=text] {
+    padding: 6px;
+    margin-left: 20px;
+    font-size: 18px;
+    border: none;
+}
+
+header button {
+    float: right;
+    position: relative;
+    padding: 6px 10px;
+    /*margin-top: 8px;*/
+    /*margin-right: 16px;*/
+    margin-left: -20px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #ccc;
+}
+
+
+img { /*Disables image dragging*/
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+/* Header */
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #172339;
+    z-index: 100;
+
+    box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 3px 16px -5px rgba(0,0,0,0.61);
+
+    font-size: 1vw;
+    font-family: 'Francois One', sans-serif;
+}
+
+header img{
+    width: 30%;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+header ul li a:hover, header ul li a.actives {
+    background: white;
+    color: #447caa;
+}
+
+#cart-icon {
+    position: relative;
+    top: 0.2vw;
+    font-size:1.8vw;
+    cursor: pointer;
+    color: white;
+
+}
+
+
+.bag-quantity {
+    position: relative;
+    top: 5px;
+    text-align: center;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+/*Billing form*/
+
+#close-billing {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.billing-container.disable {
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+
+    visibility: hidden;
+
+    transition: .5s;
+}
+
+.billing-container {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    transition: 2.5s;
+
+}
+
+.billing-form.disable {
+    margin: 20% auto;
+    opacity: 0;
+}
+
+
+.billing-form {
+
+    width:  65%;
+    height: auto;
+
+    position: sticky;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2%;
+    overflow: hidden;
+
+    font-family: 'Open Sans', sans-serif;
+    z-index: 101;
+
+    opacity: 1;
+
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 1520px) {
+    .billing-form {
+        position: relative;
+    }
+}
+
+.billing-details {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.checkout-form {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(490px,auto));
+}
+
+.form {
+
+    padding: 30px 40px;
+}
+
+.billing-title {
+    background: #447caa;
+    border-bottom: 1px solid #F0F0F0;
+
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.billing-title h2 {
+    margin: 0;
+}
+
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+}
+
+.terms-button {
+    padding: 20px 0;
+}
+
+.terms-button i {
+    position: absolute;
+
+    font-size: 20px;
+    margin: 0 0 0 500px;
+    /*visibility: hidden;*/
+}
+
+.form-control.success input {
+    border-color: springgreen;
+}
+
+.terms-button.success input {
+    border-color: springgreen;
+}
+.form-control.success i.bxs-check-circle {
+    color: springgreen;
+    visibility: visible;
+}
+
+.form-control.error input {
+    border-color: indianred;
+}
+
+.form-control.error i.bxs-error-circle {
+    color: indianred;
+    visibility: visible;
+}
+
+.form-control i {
+    position: absolute;
+    top: 36.5px;
+    right: 5px;
+    font-size: 25px;
+    visibility: hidden;
+}
+.form-control .big {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.terms-button small {
+    position: absolute;
+    width: 100%;
+    margin: 0 0 0 2%;
+    visibility: hidden;
+}
+
+.terms-button.error small {
+    color: red;
+    visibility: visible;
+
+}
+.form-control.error small {
+    color: indianred;
+    visibility: visible;
+}
+
+#active small {
+    font-size: 11px;
+    font-weight: 600;
+    color: darkgrey;
+    visibility: visible;
+}
+
+
+.form-buttons {
+    display: grid;
+    column-gap: 2.5em;
+    grid-template-columns: repeat(2, auto);
+}
+
+.form button[type=submit] {
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+
+    display: block;
+    border-radius: 4px;
+    margin: 10px auto;
+
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.form button[type=reset] {
+    background-color: grey;
+    border: 2px solid grey;
+    color: white;
+
+    display: block;
+    border-radius: 4px;
+    margin: 10px auto;
+
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+
+
+
+/*billing form end*/
+
+/*Credit card styes*/
+
+.card {
+    width: 90%;
+    height: 90%;
+
+    padding: 50px;
+    border: 0.12rem solid grey;
+
+    margin: 30px auto;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    margin-right: 50px;
+}
+
+.card-row small {
+    font-size: 15px;
+    position: absolute;
+    margin: 30px 0;
+
+    color:  indianred;
+    visibility: hidden;
+}
+
+.card-col small {
+    position: relative;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+
+.activates small{
+    visibility: visible;
+}
+
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5vw;
+    color: #172339;
+    margin: 0 0 3rem 0 ;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-col {
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-input {
+
+    width: 5vw;
+
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+    color: black;
+
+    margin: 0 10px;
+    text-align: center;
+
+}
+
+.errors {
+
+    width: 5vw;
+
+    border: 1px solid indianred;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+    color: red;
+
+    margin: 0 10px;
+    text-align: center;
+
+}
+
+.card-input-large {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 10px;
+    margin: 20px 0 ;
+}
+
+.card-input:focus {
+    outline: none;
+    border-color: dimgrey;
+}
+
+.card-input:disabled {
+    background: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+#checkout:disabled {
+    background: lightgrey;
+    color: grey;
+    border: 2px solid lightgrey;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.billing button[type=checkout] {
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+
+    display: block;
+    border-radius: 4px;
+    margin: 10px auto;
+
+    font-family: inherit;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+
+/*end card styles*/
+
+
+/*Start of Staff page*/
+.Staff {
+    width: 75%;
+    margin: 5% auto;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: -8px 10px 0px 0px rgba(0,0,0,0.17);
+    -webkit-box-shadow: -8px 10px 0px 0px rgba(0,0,0,0.17);
+    -moz-box-shadow: -8px 10px 0px 0px rgba(0,0,0,0.17);
+}
+.staffRow {
+    position: relative;
+    width:90%;
+    margin: 0 auto;
+
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 5rem;
+}
+
+.staffColumn {
+    padding: 0 8px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .staffColumn {
+        width: 100%;
+        display: block;
+    }
+}
+.staffCard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    height: 696px;
+}
+
+.topStaff {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+
+.topStaff h3 {
+    padding: 0 15%;
+    font-size: 1em;
+}
+
+.staffCard img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+.staffContainer {
+    padding: 0 16px;
+    position: relative;
+    margin: 50px 20px 20px 20px;
+    height: 60%;
+}
+
+.staffContainer::after, .staffRow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.staffTitle {
+    color: grey;
+}
+.staffButton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+
+    position: relative;
+    top: 50px
+
+}
+.staffButton:hover {
+    background-colour: #555;
+}
+/*End of Staff*/
+
+/*cart*/
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+
+    z-index: 100;
+
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    -webkit-box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    -moz-box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+
+    transition: 0.3s;
+}
+
+.cart.actives {
+    right: 0;
+}
+
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box {
+   display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-box img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-quantity {
+    border: 1px solid black;
+    outline-color: #444444;
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: green;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover {
+    background: black;
+}
+
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* end of header*/
+
+/* Styling for Game */
+
+.game {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gallery {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 60%;
+    grid-gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.img-container img:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition:  0.25s ease-out;
+}
+
+
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-img {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: ALL 0.25s ease-out;
+}
+
+
+.modal-img.open {
+transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-details  {
+    background: white;
+}
+
+
+
+.modal .caption {
+     position: absolute; /* Position the background text */
+     color: white;
+     font-size: 1em;
+     position: absolute;
+     bottom: 28%;
+     left: 50%;
+     transform: translate(-50%, 50%);
+     background: rgb(0, 0, 0); /* Fallback color */
+     background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+     padding: 20px; /* Some padding */
+ }
+
+/* End of styling for Game */
+
+
+/*STORE PAGE*/
+
+.shop {
+    margin-top: 2rem;
+}
+
+.section-title {
+
+    width: 80%;
+    margin: 0 auto;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+
+
+    padding: 1.5rem 0;
+    border-bottom: 1px solid black;
+}
+
+.shop-items {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    width: 78%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.shop-item {
+    position: relative;
+    /*left: 2%;*/
+    /*float: left;*/
+    width: auto;
+    margin: 20px;
+    height: 25em;
+
+
+    box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+.shop-item:hover {
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.shop-item img {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 10em;
+
+}
+.shop-item-details {
+
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    padding: 50px 20px;
+    display: grid;
+}
+.shop-item-title {
+    font-size: 35px;
+
+    font-family: 'Francois One', sans-serif;
+}
+
+.shop-item-price {
+    font-size: 16px;
+    padding: 0 0 10px 0;
+    font-family: 'Francois One', sans-serif;
+}
+
+
+
+.shop-item-button {
+    background-color: #447caa;
+    border: none;
+    color: white;
+    padding: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-item-button:hover {
+    background: hsl(249,32%, 17%);
+    transition: 0.3s;
+}
+
+
+/*stored featured*/
+
+
+.featured-title {
+
+    width: 80%;
+    margin: 0 auto;
+
+
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    padding: 1.5rem 0;
+}
+.featured-shop-items {
+    width: 80vw;
+    height: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 6px -1px rgba(0,0,0,0.75);
+}
+.featured-details {
+    position: relative;
+    margin: auto;
+    text-align: center;
+
+    width: auto;
+    height: 20vw;
+    display: grid;
+}
+.featured.shop-item-title {
+    font-size: 5vw;
+}
+.featured.shop-item-price {
+    font-size: 2vw;
+}
+
+
+.featured-shop-items img {
+    display: block;
+    width: 40vw;
+    height: auto;
+}
+
+/*END OF STORE PAGE*/
+
+/*START OF CONTACT PAGE*/
+.contact-container  {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Francois One', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.Map-Position {
+    overflow:hidden;
+    padding-bottom:25%;
+    /*position:relative;*/
+    height:0;
+}
+.Map-Position iframe{
+    left:0;
+    top:0;
+    height:32%;
+    width:100%;
+    position:absolute;
+}
+.contact-header {
+    /*padding: 10px 10px 10px 10px;*/
+}
+.contact-text {
+    margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    outline: none;
+}
+.hr {
+    height:10px;
+    border-width:10px;
+    size:1px;
+    colour:grey;
+    background-colour:grey"
+}
+/*Start of contact form*/
+body{
+    background: white;
+}
+
+.wrapper{
+    position: relative;
+    /*top: 1000%;*/
+    /*left: 1000%;*/
+    /*transform: translate(-50%,-50%);*/
+    max-width: 350px;
+    margin: 5% auto 5% auto;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px rgb(23,35,57);
+}
+
+.wrapper h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #332902;
+}
+
+.wrapper .input_field{
+    margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 10px;
+}
+
+.wrapper textarea{
+    resize: none;
+    height: 80px;
+}
+
+.wrapper .btn input[type="submit"]{
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: #171939d9;
+    color: #F8ECE9;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#error_message{
+    margin-bottom: 20px;
+    background: #FF0004;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.ContactForm input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.ContactForm input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.ContactForm input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.ContactForm {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/*End of Contact form*/
+
+/*END OF CONTACT PAGE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer*/
+.footer {
+    position: relative;
+    max-width: 100%;
+    height: 650px;
+    top: auto;
+
+    background: #F3F3F3;
+
+
+}
+.footer ul {
+    min-width: 696px;
+    list-style: none;
+}
+.footer li{
+    display: inline-block;
+    padding-left: 2.5%;
+    padding-right: 15%;
+}
+
+
+
+#footer-links {
+    position: relative;
+    max-width: 100%;
+    height: 84px;
+    left: 0px;
+
+    background: #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#footer-links ul {
+    position: absolute;
+    max-width: 100%;
+    left: 33%;
+    bottom: 20%;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+#footer-links li{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+#img-container {
+    max-width: 15%;
+    display: block;
+    margin-left: 40%;
+    margin-right: auto;
+}
+
+#footer-sign ul img {
+    max-width: 8%;
+    height: auto;
+}
+#footer-sign ul{
+    position: relative;
+    width: 120px;
+    height: 24px;
+    left: 38%;
+    top: 50%;
+
+}
+#footer-sign li{
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#footer-paragraph {
+     position: absolute;
+     left: 20.1%;
+     right: 20.1%;
+     top: 60%;
+     bottom: 20%;
+
+     font-style: normal;
+     font-weight: normal;
+     line-heigh: 14px;
+     text-align: center;
+
+     color: #000000;
+ }
+
+/*footer*/
+
+.footer-distributed{
+    background: #447caa;
+
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    position: absolute;
+    left: 0;
+
+    box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+    -webkit-box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+    -moz-box-shadow: -38px 31px 5px 0px rgba(7,68,125,0.44);
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  white;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  whitesmoke;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  lightgrey;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  silver;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+}
+
+
+
+/*Support page*/
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hr-line{
+    width: 60%;
+    margin: auto;
+
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    color: #444;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+    width: 50%;
+    padding: auto;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
+
+/* CSS for the ticket*/
+
+.ticket-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: ALL 0.25s ease-out;
+    background: #447caa;
+    padding: 20px;
+
+}
+
+.ticket-form h2 {
+    text-align: center;
+}
+
+.ticket-div .submit-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ticket-form input {
+    width: 100%;
+    padding: 1.5%;
+}
+
+.submit-btn {
+    justify-content: center;
+}
+
+.ticket-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.frm-modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-frm {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: ALL 0.25s ease-out;
+}
+
+
+.modal-frm.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.ticket-btn {
+    background-color: #555555;
+    border: none;
+    color: white;
+
+    position: relative;
+
+
+width: 100%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}

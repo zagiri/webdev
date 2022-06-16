@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel=" stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Games</title>
+</head>
+<body>
+    <script src="assets/JavaScript/header.js"></script>
+
+    <!-- Body  -->
+    <div class="gallery">
+        <div class="img-container">
+            <img
+                    src="assets/unpacking.jpg"
+                    alt="Unpacking is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. Part block-fitting puzzle, part home decoration, you are invited to create a satisfying living space while learning clues about the life you’re unpacking."
+                    data-original="assets/unpacking.jpg"
+            />
+        </div>
+        <div class="img-container">
+            <img
+                    src="assets/snacko.jpg"
+                    alt="Lift a curse and revitalize a ruined island in Snacko, where former big city kitties Momo and Mikan are starting a new life! Grow crops, raise fluffy cows, go fishing, exploring, customize and decorate as you please, and much, much more in this farming cat-venture."
+                    data-original="assets/snacko.jpg"
+            />
+        </div>
+        <div class="img-container">
+            <img
+                    src="/assets/brick-world-thumbnail.jpg"
+                    alt="Brick world is an open-world 2D sandbox game in which you help out towns with figuring out their architecture and sometimes with their gathering of resources for their towns."
+                    data-original="assets/brick-world-thumbnail.jpg"
+            />
+        </div>
+        <div class="img-container">
+            <img
+                    src="/assets/keywe-key-art.jpg"
+                    alt="KeyWe is a cute, co-operative postal puzzler starring Jeff and Debra, two small kiwi birds working in a whimsical post office. They must jump, flap, peck and butt-slam their way across an interactive landscape of levers, bells and buttons to get those messages delivered on time!"
+                    data-original="assets/keywe-key-art.jpg"
+            />
+        </div>
+        <div class="modal">
+        <img src="" alt="" class="modal-img" />
+        <p class="caption"></p>
+    </div>
+    </div>
+
+        <!-- End of Body  -->
+    <script>
+
+        const modal = document.querySelector(".modal");
+        const preview = document.querySelectorAll(".gallery img");
+        const original = document.querySelector(".modal-img");
+        const  caption = document.querySelector(".caption");
+
+        preview.forEach(preview => {
+            preview.addEventListener('click', () => {
+                modal.classList.add("open");
+                original.classList.add("open");
+                //Dynamically change img and text
+                const originalSrc = preview.getAttribute("data-original");
+                original.src = originalSrc
+                const altText = preview.alt;
+                caption.textContent = altText;
+            });
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target.classList.contains("modal")) {
+                modal.classList.remove('open');
+                original.classList.remove('open');
+            }
+        });
+    </script>
+    <script src="assets/JavaScript/footer.js"></script>
+</body>
+</html>
